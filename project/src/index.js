@@ -5,97 +5,123 @@ import App from './components/app/app';
 
 const elFilmCardPreview = [
   {
-    image: 'img/fantastic-beasts-the-crimes-of-grindelwald.jpg',
-    name: 'Fantastic Beasts: The Crimes of Grindelwald',
+    id: 1,
+    previewImage: 'img/fantastic-beasts-the-crimes-of-grindelwald.jpg',
+    nameFilm: 'Fantastic Beasts: The Crimes of Grindelwald',
+    genre: '',
+    released: 2014,
+
   },
   {
-    image: 'img/bohemian-rhapsody.jpg',
-    name: 'Bohemian Rhapsody',
+    id: 2,
+    previewImage: 'img/bohemian-rhapsody.jpg',
+    nameFilm: 'Bohemian Rhapsody',
   },
   {
-    image: 'img/macbeth.jpg',
-    name: 'Macbeth',
+    id: 3,
+    previewImage: 'img/macbeth.jpg',
+    nameFilm: 'Macbeth',
   },
   {
-    image: 'img/aviator.jpg',
-    name: 'Aviator',
+    id: 4,
+    previewImage: 'img/aviator.jpg',
+    nameFilm: 'Aviator',
   },
   {
-    image: 'img/we-need-to-talk-about-kevin.jpg',
-    name: 'We need to talk about Kevin',
+    id: 5,
+    previewImage: 'img/we-need-to-talk-about-kevin.jpg',
+    nameFilm: 'We need to talk about Kevin',
   },
   {
-    image: 'img/what-we-do-in-the-shadows.jpg',
-    name: 'What We Do in the Shadows',
+    id: 6,
+    previewImage: 'img/what-we-do-in-the-shadows.jpg',
+    nameFilm: 'What We Do in the Shadows',
   },
   {
-    image: 'img/revenant.jpg',
-    name: 'Revenant',
+    id: 7,
+    previewImage: 'img/revenant.jpg',
+    nameFilm: 'Revenant',
   },
   {
-    image: 'img/johnny-english.jpg',
-    name: 'Johnny English',
+    id: 8,
+    previewImage: 'img/johnny-english.jpg',
+    nameFilm: 'Johnny English',
   },
   {
-    image: 'img/shutter-island.jpg',
-    name: 'Shutter Island',
+    id: 9,
+    previewImage: 'img/shutter-island.jpg',
+    nameFilm: 'Shutter Island',
   },
   {
-    image: 'img/pulp-fiction.jpg',
-    name: 'Pulp Fiction',
+    id: 10,
+    previewImage: 'img/pulp-fiction.jpg',
+    nameFilm: 'Pulp Fiction',
   },
   {
-    image: 'img/no-country-for-old-men.jpg',
-    name: 'No Country for Old Men',
+    id: 11,
+    previewImage: 'img/no-country-for-old-men.jpg',
+    nameFilm: 'No Country for Old Men',
   },
   {
-    image: 'img/snatch.jpg',
-    name: 'Snatch',
+    id: 12,
+    previewImage: 'img/snatch.jpg',
+    nameFilm: 'Snatch',
   },
   {
-    image: 'img/moonrise-kingdom.jpg',
-    name: 'Moonrise Kingdom',
+    id: 13,
+    previewImage: 'img/moonrise-kingdom.jpg',
+    nameFilm: 'Moonrise Kingdom',
   },
   {
-    image: 'img/seven-years-in-tibet.jpg',
-    name: 'Seven Years in Tibet',
+    id: 14,
+    previewImage: 'img/seven-years-in-tibet.jpg',
+    nameFilm: 'Seven Years in Tibet',
   },
   {
-    image: 'img/midnight-special.jpg',
-    name: 'Midnight Special',
+    id: 15,
+    previewImage: 'img/midnight-special.jpg',
+    nameFilm: 'Midnight Special',
   },
   {
-    image: 'img/war-of-the-worlds.jpg',
-    name: 'War of the Worlds',
+    id: 16,
+    previewImage: 'img/war-of-the-worlds.jpg',
+    nameFilm: 'War of the Worlds',
   },
   {
-    image: 'img/dardjeeling-limited.jpg',
-    name: 'Dardjeeling Limited',
+    id: 17,
+    previewImage: 'img/dardjeeling-limited.jpg',
+    nameFilm: 'Dardjeeling Limited',
   },
   {
-    image: 'img/orlando.jpg',
-    name: 'Orlando',
+    id: 18,
+    previewImage: 'img/orlando.jpg',
+    nameFilm: 'Orlando',
   },
   {
-    image: 'img/mindhunter.jpg',
-    name: 'Mindhunter',
+    id: 19,
+    previewImage: 'img/mindhunter.jpg',
+    nameFilm: 'Mindhunter',
   },
-  // {
-  //   image: 'img/midnight-special.jpg',
-  //   name: 'Midnight Special',
-  // },
 ];
 
-const titlePromoFilm = 'The Grand Budapest Hotel';
-const genrePromoFilm = 'Drama';
-const dateReleasePromoFilm = '2014';
+const promoFilm = {
+  titlePromoFilm: 'The Grand Budapest Hotel',
+  genrePromoFilm: 'Drama',
+  dateReleasePromoFilm: '2014',
+};
+
+// const titlePromoFilm = 'The Grand Budapest Hotel';
+// const genrePromoFilm = 'Drama';
+// const dateReleasePromoFilm = '2014';
 
 ReactDOM.render(
   <React.StrictMode>
-    <App elFilmCardPreview = {elFilmCardPreview}
-      titlePromoFilm = {titlePromoFilm}
-      genrePromoFilm = {genrePromoFilm}
-      dateReleasePromoFilm = {dateReleasePromoFilm}
+    <App
+      elFilmCardPreview = {elFilmCardPreview}
+      // titlePromoFilm = {titlePromoFilm}
+      // genrePromoFilm = {genrePromoFilm}
+      // dateReleasePromoFilm = {dateReleasePromoFilm}
+      promoFilm = {promoFilm}
     />
   </React.StrictMode>,
   document.getElementById('root'),

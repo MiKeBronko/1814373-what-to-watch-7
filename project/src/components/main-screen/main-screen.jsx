@@ -1,17 +1,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import  FilmCardPreview from '../film-card/film-card';
-
-
-// const titlePromoFilm = '';
-// const genrePromoFilm = '';
-// const dateReleasePromoFilm = '';
-
 function MainScreen (props) {
   const {elFilmCardPreview} = props;
-  const {titlePromoFilm} = props;
-  const {genrePromoFilm} = props;
-  const {dateReleasePromoFilm} = props;
+  const {promoFilm} = props;
+  // const {titlePromoFilm} = props;
+  // const {genrePromoFilm} = props;
+  // const {dateReleasePromoFilm} = props;
   return (
     <>
       <section className="film-card">
@@ -44,10 +39,10 @@ function MainScreen (props) {
               <img src="img/the-grand-budapest-hotel-poster.jpg" alt="The Grand Budapest Hotel poster" width={218} height={327} />
             </div>
             <div className="film-card__desc">
-              <h2 className="film-card__title">{titlePromoFilm}</h2>
+              <h2 className="film-card__title">{promoFilm.titlePromoFilm}</h2>
               <p className="film-card__meta">
-                <span className="film-card__genre">{genrePromoFilm}</span>
-                <span className="film-card__year">{dateReleasePromoFilm}</span>
+                <span className="film-card__genre">{promoFilm.genrePromoFilm}</span>
+                <span className="film-card__year">{promoFilm.dateReleasePromoFilm}</span>
               </p>
               <div className="film-card__buttons">
                 <button className="btn btn--play film-card__button" type="button">
@@ -105,9 +100,10 @@ function MainScreen (props) {
           <div className="catalog__films-list">
 
             {
-              elFilmCardPreview.map(({image, name}) =>
-                <FilmCardPreview key={image, name} image={image} name ={name}/>)
+              elFilmCardPreview.map((film) =>
+                <FilmCardPreview key={film.id} previewImage = {film.previewImage} nameFilm = {film.nameFilm}/>)
             }
+
 
           </div>
           <div className="catalog__more">
@@ -134,9 +130,7 @@ function MainScreen (props) {
 
 MainScreen.propTypes = {
   elFilmCardPreview: PropTypes.array.isRequired,
-  titlePromoFilm: PropTypes.string.isRequired,
-  genrePromoFilm: PropTypes.string.isRequired,
-  dateReleasePromoFilm: PropTypes.string.isRequired,
+  promoFilm: PropTypes.object.isRequired,
 };
 
 export default MainScreen;
