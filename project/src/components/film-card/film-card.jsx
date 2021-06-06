@@ -1,8 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 function FilmCardPreview (props) {
-  const {nameFilm} = props;
-  const {previewImage} = props;
+  const {previewImage, nameFilm} = props;
   // const {elFilmCardPreview} = props;
   return (
     <article className="small-film-card catalog__films-card">
