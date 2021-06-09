@@ -1,12 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import  FilmCardPreview from '../film-card/film-card';
+import Logo from '../logo/logo';
+
 function MainScreen (props) {
   const {elFilmCardPreview} = props;
   const {promoFilm} = props;
-  // const {titlePromoFilm} = props;
-  // const {genrePromoFilm} = props;
-  // const {dateReleasePromoFilm} = props;
   return (
     <>
       <section className="film-card">
@@ -15,13 +14,7 @@ function MainScreen (props) {
         </div>
         <h1 className="visually-hidden">WTW</h1>
         <header className="page-header film-card__head">
-          <div className="logo">
-            <a className="logo__link" href={'/'}>
-              <span className="logo__letter logo__letter--1" href={'/'}>W</span>
-              <span className="logo__letter logo__letter--2">T</span>
-              <span className="logo__letter logo__letter--3">W</span>
-            </a>
-          </div>
+          <Logo />
           <ul className="user-block">
             <li className="user-block__item">
               <div className="user-block__avatar">
@@ -111,13 +104,7 @@ function MainScreen (props) {
           </div>
         </section>
         <footer className="page-footer">
-          <div className="logo">
-            <a className="logo__link logo__link--light" href={'/'}>
-              <span className="logo__letter logo__letter--1">W</span>
-              <span className="logo__letter logo__letter--2">T</span>
-              <span className="logo__letter logo__letter--3">W</span>
-            </a>
-          </div>
+          <Logo />
           <div className="copyright">
             <p>© 2019 What to watch Ltd.</p>
           </div>

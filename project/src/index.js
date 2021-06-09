@@ -110,17 +110,10 @@ const promoFilm = {
   dateReleasePromoFilm: '2014',
 };
 
-// const titlePromoFilm = 'The Grand Budapest Hotel';
-// const genrePromoFilm = 'Drama';
-// const dateReleasePromoFilm = '2014';
-
 ReactDOM.render(
   <React.StrictMode>
     <App
       elFilmCardPreview = {elFilmCardPreview}
-      // titlePromoFilm = {titlePromoFilm}
-      // genrePromoFilm = {genrePromoFilm}
-      // dateReleasePromoFilm = {dateReleasePromoFilm}
       promoFilm = {promoFilm}
     />
   </React.StrictMode>,
