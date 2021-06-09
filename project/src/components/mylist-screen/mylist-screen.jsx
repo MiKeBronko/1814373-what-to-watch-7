@@ -5,7 +5,7 @@ import  FilmCardPreview from '../film-card/film-card';
 import Logo from '../logo/logo';
 
 function MyListScreen (props) {
-  const {elMyListFilmCardPreview}  = props;
+  const {elFilmCardPreview}  = props;
   return (
     <div className="user-page">
       <header className="page-header user-page__head">
@@ -26,7 +26,7 @@ function MyListScreen (props) {
         <h2 className="catalog__title visually-hidden">Catalog</h2>
         <div className="catalog__films-list">
           {
-            elMyListFilmCardPreview.map((film) =>
+            elFilmCardPreview.slice(0,8).map((film) =>
               <FilmCardPreview key={film.id} previewImage = {film.previewImage} nameFilm = {film.nameFilm}/>)
           }
         </div>
@@ -42,7 +42,7 @@ function MyListScreen (props) {
 }
 
 MyListScreen.propTypes = {
-  elMyListFilmCardPreview: PropTypes.array.isRequired,
+  elFilmCardPreview: PropTypes.array.isRequired,
 };
 
 export default MyListScreen;

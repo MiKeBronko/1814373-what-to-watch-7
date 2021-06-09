@@ -3,11 +3,10 @@ import {Link} from 'react-router-dom';
 
 function NotFoundScreen () {
   return (
-    <div className="page-content">
-      <div className="film-card__wrap">
-        <h1>404. Page not found</h1>
-        <Link to='/'>Вернуться на главную страницу</Link>
-      </div>
+    <div style={{display: 'flex','flex-direction':'column', 'align-items':'center' ,width: '500px', margin:'0 auto'}}>
+      <img style = {{width: '300px', height: '300px'}} src="img/filmstrip.png" alt="film strip" />
+      <h1>404. Page not found</h1>
+      <Link to='/'>Вернуться на главную страницу</Link>
     </div>
   );
 }

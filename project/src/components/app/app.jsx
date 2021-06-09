@@ -13,7 +13,7 @@ import NotFoundScreen from '../404-screen/404-screen';
 
 
 function App(props) {
-  const {elFilmCardPreview, promoFilm, elMyListFilmCardPreview, elFilms} = props;
+  const {elFilmCardPreview, promoFilm} = props;
   return (
     <BrowserRouter>
       <Switch>
@@ -24,10 +24,10 @@ function App(props) {
           <LoginScreen/>
         </Route>
         <Route exact path={AppRoute.MYLIST}>
-          <MyListScreen elMyListFilmCardPreview = {elMyListFilmCardPreview}/>
+          <MyListScreen elFilmCardPreview = {elFilmCardPreview}/>
         </Route>
         <Route exact path={AppRoute.FILM}>
-          <FilmScreen elFilms = {elFilms}/>
+          <FilmScreen elFilmCardPreview = {elFilmCardPreview}/>
         </Route>
         <Route exact path={AppRoute.PLAYER}>
           <PlayerScreen/>
@@ -46,8 +46,6 @@ function App(props) {
 App.propTypes = {
   elFilmCardPreview: PropTypes.array.isRequired,
   promoFilm: PropTypes.object.isRequired,
-  elMyListFilmCardPreview: PropTypes.array.isRequired,
-  elFilms: PropTypes.array.isRequired,
 };
 
 export default App;

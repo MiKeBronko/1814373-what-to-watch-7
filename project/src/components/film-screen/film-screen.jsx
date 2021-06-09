@@ -4,7 +4,7 @@ import  FilmCardPreview from '../film-card/film-card';
 import Logo from '../logo/logo';
 
 function FilmScreen (props) {
-  const {elFilms}  = props;
+  const {elFilmCardPreview}  = props;
   return (
     <>
       <section className="film-card film-card--full">
@@ -92,7 +92,7 @@ function FilmScreen (props) {
           <h2 className="catalog__title">More like this</h2>
           <div className="catalog__films-list">
             {
-              elFilms.map((film) =>
+              elFilmCardPreview.slice(0,4).map((film) =>
                 <FilmCardPreview key={film.id} previewImage = {film.previewImage} nameFilm = {film.nameFilm}/>)
             }
           </div>
@@ -109,7 +109,7 @@ function FilmScreen (props) {
 }
 
 FilmScreen.propTypes = {
-  elFilms: PropTypes.array.isRequired,
+  elFilmCardPreview: PropTypes.array.isRequired,
 };
 
 export default FilmScreen;
