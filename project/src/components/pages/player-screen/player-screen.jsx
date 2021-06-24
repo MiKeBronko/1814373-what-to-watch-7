@@ -1,9 +1,21 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
-function PlayerScreen () {
+function PlayerScreen (props) {
+  const { films } = props;
+const { id, posterImage, video } = props;
   return (
     <div className="player">
-      <video src="#" className="player__video" poster="img/player-poster.jpg" />
+      { films.map((film) => {
+        const keyValue= `${film.id}`;
+        const curVideo = `${film.video}`;
+        const curPoster= `${film.posterImage}`;
+        console.log(keyValue, curVideo, curPoster);
+        return (
+          <video key = { keyValue } src= {curVideo}  className="player__video" poster = {curPoster}/>
+        )
+      })
+      }
       <button type="button" className="player__exit">Exit</button>
       <div className="player__controls">
         <div className="player__controls-row">
@@ -32,5 +44,11 @@ function PlayerScreen () {
     </div>
   );
 }
+
+PlayerScreen.propTypes = {
+  films: PropTypes.array.isRequired,
+  posterImage: PropTypes.string.isRequired,
+  video: PropTypes.string.isRequired,
+};
 
 export default PlayerScreen;

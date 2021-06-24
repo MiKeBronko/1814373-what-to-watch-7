@@ -1,0 +1,83 @@
+const films=[
+  // {
+  //   id: 1,
+  //   name: "The Grand Budapest Hotel",
+  //   poster_image: "img/the-grand-budapest-hotel-poster.jpg",
+  //   preview_image: "img/the-grand-budapest-hotel.jpg",
+  //   background_image: "img/the-grand-budapest-hotel-bg.jpg",
+  //   background_color: "#ffffff",
+  //   video_link: "https://some-link",
+  //   preview_video_link: "https://some-link",
+  //   description: "In the 1930s, the Grand Budapest Hotel is a popular European ski resort, presided over by concierge Gustave H. (Ralph Fiennes). Zero, a junior lobby boy, becomes Gustave's friend and protege.",
+  //   rating: 8.9,
+  //   scores_count: 240,
+  //   director: "Wes Andreson",
+  //   starring: ["Bill Murray", "Edward Norton", "Jude Law", "Willem Dafoe", "Saoirse Ronan"],
+  //   run_time: 99,
+  //   genre: "Comedy",
+  //   released: 2014,
+  //   is_favorite: false
+  // }
+  {
+    id: 1,
+    previewImage: 'img/fantastic-beasts-the-crimes-of-grindelwald.jpg',
+    posterImage: "img/the-grand-budapest-hotel-poster.jpg",
+    name: 'Fantastic Beasts: The Crimes of Grindelwald',
+    genre: '',
+    released: '2014',
+    video: 'https://download.blender.org/durian/trailer/sintel_trailer-480p.mp4',
+  },
+  {
+    id: 2,
+    previewImage: 'img/bohemian-rhapsody.jpg',
+    posterImage: "img/the-grand-budapest-hotel-poster.jpg",
+    name: 'Bohemian Rhapsody',
+    genre: '',
+    released: '2020',
+    video: 'https://upload.wikimedia.org/wikipedia/commons/transcoded/b/b3/Big_Buck_Bunny_Trailer_400p.ogv/Big_Buck_Bunny_Trailer_400p.ogv.360p.webm',
+  },
+  {
+    id: 3,
+    previewImage: 'img/macbeth.jpg',
+    posterImage: "img/the-grand-budapest-hotel-poster.jpg",
+    name: 'Macbeth',
+    video: 'https://upload.wikimedia.org/wikipedia/commons/transcoded/b/b3/Big_Buck_Bunny_Trailer_400p.ogv/Big_Buck_Bunny_Trailer_400p.ogv.360p.webm',
+  },
+  {
+    id: 4,
+    previewImage: 'img/aviator.jpg',
+    posterImage: "img/the-grand-budapest-hotel-poster.jpg",
+    name: 'Aviator',
+    video: 'https://upload.wikimedia.org/wikipedia/commons/transcoded/b/b3/Big_Buck_Bunny_Trailer_400p.ogv/Big_Buck_Bunny_Trailer_400p.ogv.360p.webm',
+  },
+  {
+    id: 5,
+    previewImage: 'img/we-need-to-talk-about-kevin.jpg',
+    posterImage: "img/the-grand-budapest-hotel-poster.jpg",
+    name: 'We need to talk about Kevin',
+    video: 'https://upload.wikimedia.org/wikipedia/commons/transcoded/b/b3/Big_Buck_Bunny_Trailer_400p.ogv/Big_Buck_Bunny_Trailer_400p.ogv.360p.webm',
+  },
+  {
+    id: 6,
+    previewImage: 'img/what-we-do-in-the-shadows.jpg',
+    posterImage: "img/the-grand-budapest-hotel-poster.jpg",
+    name: 'What We Do in the Shadows',
+    video: 'https://upload.wikimedia.org/wikipedia/commons/transcoded/b/b3/Big_Buck_Bunny_Trailer_400p.ogv/Big_Buck_Bunny_Trailer_400p.ogv.360p.webm',
+  },
+  {
+    id: 7,
+    previewImage: 'img/revenant.jpg',
+    posterImage: "img/the-grand-budapest-hotel-poster.jpg",
+    name: 'Revenant',
+    video: 'https://upload.wikimedia.org/wikipedia/commons/transcoded/b/b3/Big_Buck_Bunny_Trailer_400p.ogv/Big_Buck_Bunny_Trailer_400p.ogv.360p.webm',
+  },
+  {
+    id: 8,
+    previewImage: 'img/johnny-english.jpg',
+    posterImage: "img/the-grand-budapest-hotel-poster.jpg",
+    name: 'Johnny English',
+    video: 'https://upload.wikimedia.org/wikipedia/commons/transcoded/b/b3/Big_Buck_Bunny_Trailer_400p.ogv/Big_Buck_Bunny_Trailer_400p.ogv.360p.webm',
+  },
+];
+
+export default films;

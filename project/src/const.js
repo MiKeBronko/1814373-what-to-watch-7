@@ -5,4 +5,5 @@ export const AppRoute = {
   FILM: '/films/:id',
   PLAYER: '/player/:id',
   ADDREVIEW: '/films/:id/review',
+  DEVFILMSLIST: '/filmslist',
 };
