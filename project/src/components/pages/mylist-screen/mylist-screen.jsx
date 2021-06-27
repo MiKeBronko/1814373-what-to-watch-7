@@ -2,8 +2,8 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import {Link} from 'react-router-dom';
 // import  FilmCardPreview from '../../film-card/film-card';
-import Logo from '../../logo/logo';
-import Films from '../films-list-screen/films-list-screen';
+import Logo from '../../elements/logo/logo';
+import Films from '../../../hooks/films-list/films-list';
 
 function MyListScreen (props) {
   const {films}  = props;
@@ -26,7 +26,7 @@ function MyListScreen (props) {
       <section className="catalog">
         <h2 className="catalog__title visually-hidden">Catalog</h2>
         <div className="catalog__films-list">
-        <Films films={films} />
+          <Films films={films} />
           {/* {
             films.slice(0,8).map((film) =>
               <FilmCardPreview key={film.id} previewImage = {film.previewImage} nameFilm = {film.nameFilm}/>)

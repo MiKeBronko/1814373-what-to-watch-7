@@ -3,19 +3,19 @@ import PropTypes from 'prop-types';
 
 function PlayerScreen (props) {
   const { films } = props;
-const { id, posterImage, video } = props;
   return (
-    <div className="player">
-      { films.map((film) => {
-        const keyValue= `${film.id}`;
+    <div  className="player">
+      {/* { films.map((film, i) => {
+        const keyValue= i//`${film.id}`;
         const curVideo = `${film.video}`;
         const curPoster= `${film.posterImage}`;
         console.log(keyValue, curVideo, curPoster);
         return (
-          <video key = { keyValue } src= {curVideo}  className="player__video" poster = {curPoster}/>
-        )
-      })
-      }
+          <video  src= {curVideo}  className="player__video" poster = {curPoster}/>
+          )
+        })
+      } */}
+      <video  src= {`${films[0].videoLink}`}  className="player__video" poster = {`${films[0].previewImage}`}/>
       <button type="button" className="player__exit">Exit</button>
       <div className="player__controls">
         <div className="player__controls-row">
@@ -47,8 +47,6 @@ const { id, posterImage, video } = props;
 
 PlayerScreen.propTypes = {
   films: PropTypes.array.isRequired,
-  posterImage: PropTypes.string.isRequired,
-  video: PropTypes.string.isRequired,
 };
 
 export default PlayerScreen;

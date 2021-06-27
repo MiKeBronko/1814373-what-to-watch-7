@@ -1,8 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 // import FilmCardPreview from '../../film-card/film-card';
-import Logo from '../../logo/logo';
-import Films from '../films-list-screen/films-list-screen';
+import Logo from '../../elements/logo/logo';
+import Films from '../../../hooks/films-list/films-list';
 
 
 function MainScreen (props) {
@@ -99,8 +99,8 @@ function MainScreen (props) {
 
             {
               films.map((film) =>
-                <FilmCardPreview 
-                  key={film.id} 
+                <FilmCardPreview
+                  key={film.id}
                   onClick={clickHandler}
                   previewImage={film.previewImage} nameFilm={film.nameFilm}/>)
             }

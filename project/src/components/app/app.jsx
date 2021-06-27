@@ -10,7 +10,7 @@ import FilmScreen from '../pages/film-screen/film-screen';
 import PlayerScreen from '../pages/player-screen/player-screen';
 import ReviewScreen from '../pages/review-screen/review-screen';
 import NotFoundScreen from '../pages/404-screen/404-screen';
-import FilmsList from '../pages/films-list-screen/films-list-screen';
+import FilmsList from '../../hooks/films-list/films-list';
 
 // import films from '../../mocks/films';
 // import review from '../../mocks/review';
@@ -35,14 +35,15 @@ function App(props) {
           {/* <MyListScreen elFilmCardPreview = {elFilmCardPreview}/> */}
           <MyListScreen films = {films}/>
         </Route>
-        <Route exact path={AppRoute.FILM}>
+        <Route exact path={'/films/:id'}>
+          {/* <Route exact path={AppRoute.FILM}> */}
           <FilmScreen films = {films}/>
         </Route>
         <Route exact path={AppRoute.PLAYER}>
           <PlayerScreen films = {films}/>
         </Route>
         <Route exact path={AppRoute.ADDREVIEW}>
-          <ReviewScreen review={review}/>
+          <ReviewScreen films = {films} review={review}/>
         </Route>
         <Route exact path={AppRoute.DEVFILMSLIST}>
           <FilmsList films = {films}/>
