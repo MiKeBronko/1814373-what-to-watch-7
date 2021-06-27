@@ -3,12 +3,12 @@ import React, { useState }  from 'react';
 
 
 function FormReview () {
-  const [isReview, setReview] = useState({});
-  const handleReviewChange = () => {
-    setReview(isReview);
+  const [isReview, setReview] = useState('');
+  const handleSetReview = (event) => {
+    setReview(event.target.value);
   };
   return (
-    <form onSubmit={handleReviewChange} action={'/'} className="add-review__form">
+    <form onSubmit={setReview} action={'/'} className="add-review__form">
       <div className="rating">
         <div className="rating__stars">
           <input className="rating__input" id="star-10" type="radio" name="rating" defaultValue={10} />
@@ -34,11 +34,11 @@ function FormReview () {
         </div>
       </div>
       <div className="add-review__text">
-        <textarea onChange = {handleReviewChange}
+        <textarea onChange={handleSetReview}
           className="add-review__textarea"
           name="review-text"
           id="review-text"
-          placeholder="Review text" defaultValue={''}
+          placeholder="Review text" defaultValue={isReview}
         />
         <div className="add-review__submit">
           <button className="add-review__btn" type="submit">Post</button>
