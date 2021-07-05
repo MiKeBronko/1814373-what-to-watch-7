@@ -11,11 +11,9 @@ import PlayerScreen from '../pages/player-screen/player-screen';
 import ReviewScreen from '../pages/review-screen/review-screen';
 import NotFoundScreen from '../pages/404-screen/404-screen';
 import FilmsList from '../../hooks/films-list/films-list';
+// import filmCardPropTypes from '../elements/film-card/film-card.prop';
+import filmPropTypes from '../elements/film-card/film-card.prop';
 
-// import films from '../../mocks/films';
-// import review from '../../mocks/review';
-// import filmsProp from '../film-screen/film.prop';
-// import reviewProp from '../review-screen/review.prop';
 
 function App(props) {
   // const {elFilmCardPreview, promoFilm} = props;
@@ -57,9 +55,8 @@ function App(props) {
 }
 
 App.propTypes = {
-  // elFilmCardPreview: PropTypes.array.isRequired,
   promoFilm: PropTypes.object.isRequired,
-  films: PropTypes.array.isRequired,
+  films: PropTypes.arrayOf(filmPropTypes),
   review: PropTypes.array.isRequired,
 };
 
