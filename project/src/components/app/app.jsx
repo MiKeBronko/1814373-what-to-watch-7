@@ -3,37 +3,48 @@ import PropTypes from 'prop-types';
 import {AppRoute} from '../../const';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 
-import MainScreen from '../main-screen/main-screen';
-import LoginScreen from '../login-screen/login';
-import MyListScreen from '../mylist-screen/mylist-screen';
-import FilmScreen from '../film-screen/film-screen';
-import PlayerScreen from '../player-screen/player-screen';
-import ReviewScreen from '../review-screen/review-screen';
-import NotFoundScreen from '../404-screen/404-screen';
+import MainScreen from '../pages/main-screen/main-screen';
+import LoginScreen from '../pages/login-screen/login';
+import MyListScreen from '../pages/mylist-screen/mylist-screen';
+import FilmScreen from '../pages/film-screen/film-screen';
+import PlayerScreen from '../pages/player-screen/player-screen';
+import ReviewScreen from '../pages/review-screen/review-screen';
+import NotFoundScreen from '../pages/404-screen/404-screen';
+import FilmsList from '../../hooks/films-list/films-list';
+// import filmCardPropTypes from '../elements/film-card/film-card.prop';
+import filmPropTypes from '../elements/film-card/film-card.prop';
 
 
 function App(props) {
-  const {elFilmCardPreview, promoFilm} = props;
+  // const {elFilmCardPreview, promoFilm} = props;
+  const {promoFilm} = props;
+  const {films, review} = props;
   return (
     <BrowserRouter>
       <Switch>
         <Route exact path={AppRoute.MAIN}>
-          <MainScreen elFilmCardPreview = {elFilmCardPreview} promoFilm = {promoFilm}/>
+          {/* <MainScreen elFilmCardPreview = {elFilmCardPreview} promoFilm = {promoFilm}/> */}
+          <MainScreen films = {films} promoFilm = {promoFilm}/>
         </Route>
         <Route exact path={AppRoute.LOGIN}>
           <LoginScreen/>
         </Route>
         <Route exact path={AppRoute.MYLIST}>
-          <MyListScreen elFilmCardPreview = {elFilmCardPreview}/>
+          {/* <MyListScreen elFilmCardPreview = {elFilmCardPreview}/> */}
+          <MyListScreen films = {films}/>
         </Route>
-        <Route exact path={AppRoute.FILM}>
-          <FilmScreen elFilmCardPreview = {elFilmCardPreview}/>
+        <Route exact path={'/films/:id'}>
+          {/* <Route exact path={AppRoute.FILM}> */}
+          <FilmScreen films = {films}/>
         </Route>
         <Route exact path={AppRoute.PLAYER}>
-          <PlayerScreen/>
+          <PlayerScreen films = {films}/>
         </Route>
         <Route exact path={AppRoute.ADDREVIEW}>
-          <ReviewScreen/>
+          <ReviewScreen films = {films} review={review}/>
+        </Route>
+        <Route exact path={AppRoute.DEVFILMSLIST}>
+          <FilmsList films = {films}/>
         </Route>
         <Route>
           <NotFoundScreen/>
@@ -44,8 +55,9 @@ function App(props) {
 }
 
 App.propTypes = {
-  elFilmCardPreview: PropTypes.array.isRequired,
   promoFilm: PropTypes.object.isRequired,
+  films: PropTypes.arrayOf(filmPropTypes),
+  review: PropTypes.array.isRequired,
 };
 
 export default App;

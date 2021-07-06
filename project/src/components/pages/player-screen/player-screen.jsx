@@ -1,9 +1,21 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
-function PlayerScreen () {
+function PlayerScreen (props) {
+  const { films } = props;
   return (
-    <div className="player">
-      <video src="#" className="player__video" poster="img/player-poster.jpg" />
+    <div  className="player">
+      {/* { films.map((film, i) => {
+        const keyValue= i//`${film.id}`;
+        const curVideo = `${film.video}`;
+        const curPoster= `${film.posterImage}`;
+        console.log(keyValue, curVideo, curPoster);
+        return (
+          <video  src= {curVideo}  className="player__video" poster = {curPoster}/>
+          )
+        })
+      } */}
+      <video  src= {`${films[0].videoLink}`}  className="player__video" poster = {`${films[0].previewImage}`}/>
       <button type="button" className="player__exit">Exit</button>
       <div className="player__controls">
         <div className="player__controls-row">
@@ -32,5 +44,9 @@ function PlayerScreen () {
     </div>
   );
 }
+
+PlayerScreen.propTypes = {
+  films: PropTypes.array.isRequired,
+};
 
 export default PlayerScreen;

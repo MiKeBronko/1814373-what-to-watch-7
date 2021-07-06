@@ -1,11 +1,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import {Link} from 'react-router-dom';
-import  FilmCardPreview from '../film-card/film-card';
-import Logo from '../logo/logo';
+// import  FilmCardPreview from '../../film-card/film-card';
+import Logo from '../../elements/logo/logo';
+import Films from '../../../hooks/films-list/films-list';
 
 function MyListScreen (props) {
-  const {elFilmCardPreview}  = props;
+  const {films}  = props;
   return (
     <div className="user-page">
       <header className="page-header user-page__head">
@@ -25,10 +26,11 @@ function MyListScreen (props) {
       <section className="catalog">
         <h2 className="catalog__title visually-hidden">Catalog</h2>
         <div className="catalog__films-list">
-          {
-            elFilmCardPreview.slice(0,8).map((film) =>
+          <Films films={films} />
+          {/* {
+            films.slice(0,8).map((film) =>
               <FilmCardPreview key={film.id} previewImage = {film.previewImage} nameFilm = {film.nameFilm}/>)
-          }
+          } */}
         </div>
       </section>
       <footer className="page-footer">
@@ -42,7 +44,7 @@ function MyListScreen (props) {
 }
 
 MyListScreen.propTypes = {
-  elFilmCardPreview: PropTypes.array.isRequired,
+  films: PropTypes.array.isRequired,
 };
 
 export default MyListScreen;

@@ -1,11 +1,15 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import  FilmCardPreview from '../film-card/film-card';
-import Logo from '../logo/logo';
+// import FilmCardPreview from '../../film-card/film-card';
+import Logo from '../../elements/logo/logo';
+import Films from '../../../hooks/films-list/films-list';
+
 
 function MainScreen (props) {
-  const {elFilmCardPreview} = props;
+  const {films} = props;
   const {promoFilm} = props;
+
+  // const clickHandler = (evt) => console.log('click', evt);
   return (
     <>
       <section className="film-card">
@@ -90,15 +94,18 @@ function MainScreen (props) {
               <a href={'/'} className="catalog__genres-link">Thrillers</a>
             </li>
           </ul>
-          <div className="catalog__films-list">
+          <Films films={films} />
+          {/* <div className="catalog__films-list">
 
             {
-              elFilmCardPreview.map((film) =>
-                <FilmCardPreview key={film.id} previewImage = {film.previewImage} nameFilm = {film.nameFilm}/>)
+              films.map((film) =>
+                <FilmCardPreview
+                  key={film.id}
+                  onClick={clickHandler}
+                  previewImage={film.previewImage} nameFilm={film.nameFilm}/>)
             }
 
-
-          </div>
+          </div> */}
           <div className="catalog__more">
             <button className="catalog__button" type="button">Show more</button>
           </div>
@@ -116,7 +123,7 @@ function MainScreen (props) {
 
 
 MainScreen.propTypes = {
-  elFilmCardPreview: PropTypes.array.isRequired,
+  films: PropTypes.array.isRequired,
   promoFilm: PropTypes.object.isRequired,
 };
 

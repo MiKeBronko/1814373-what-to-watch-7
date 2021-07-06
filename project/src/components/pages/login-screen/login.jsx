@@ -1,5 +1,5 @@
 import React from 'react';
-import Logo from '../logo/logo';
+import Logo from '../../elements/logo/logo';
 
 function LoginScreen () {
   return (
