@@ -6,9 +6,7 @@ import Films from '../../../hooks/films-list/films-list';
 
 
 function MainScreen (props) {
-  const {films} = props;
-  const {promoFilm} = props;
-
+  const {films, promo} = props;
   // const clickHandler = (evt) => console.log('click', evt);
   return (
     <>
@@ -36,10 +34,10 @@ function MainScreen (props) {
               <img src="img/the-grand-budapest-hotel-poster.jpg" alt="The Grand Budapest Hotel poster" width={218} height={327} />
             </div>
             <div className="film-card__desc">
-              <h2 className="film-card__title">{promoFilm.titlePromoFilm}</h2>
+              <h2 className="film-card__title">{promo.name}</h2>
               <p className="film-card__meta">
-                <span className="film-card__genre">{promoFilm.genrePromoFilm}</span>
-                <span className="film-card__year">{promoFilm.dateReleasePromoFilm}</span>
+                <span className="film-card__genre">{promo.genre}</span>
+                <span className="film-card__year">{promo.realesed}</span>
               </p>
               <div className="film-card__buttons">
                 <button className="btn btn--play film-card__button" type="button">
@@ -124,7 +122,7 @@ function MainScreen (props) {
 
 MainScreen.propTypes = {
   films: PropTypes.array.isRequired,
-  promoFilm: PropTypes.object.isRequired,
+  promo: PropTypes.array.isRequired,
 };
 
 export default MainScreen;

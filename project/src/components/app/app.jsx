@@ -16,15 +16,13 @@ import filmPropTypes from '../elements/film-card/film-card.prop';
 
 
 function App(props) {
-  // const {elFilmCardPreview, promoFilm} = props;
-  const {promoFilm} = props;
-  const {films, review} = props;
+  const {films, review, promo} = props;
   return (
     <BrowserRouter>
       <Switch>
         <Route exact path={AppRoute.MAIN}>
           {/* <MainScreen elFilmCardPreview = {elFilmCardPreview} promoFilm = {promoFilm}/> */}
-          <MainScreen films = {films} promoFilm = {promoFilm}/>
+          <MainScreen films = {films} promo = { promo }/>
         </Route>
         <Route exact path={AppRoute.LOGIN}>
           <LoginScreen/>
@@ -55,7 +53,7 @@ function App(props) {
 }
 
 App.propTypes = {
-  promoFilm: PropTypes.object.isRequired,
+  promo: PropTypes.arrayOf(filmPropTypes).isRequired,
   films: PropTypes.arrayOf(filmPropTypes),
   review: PropTypes.array.isRequired,
 };
